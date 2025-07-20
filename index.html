@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Signika" rel="stylesheet">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/start/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravakar Mondal - Developer Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+            nav a {
+                color: #fff;
+                margin: 0 1rem;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                nav a:hover {
+                    text-decoration: underline;
+                }
+
+        .section {
+            padding: 2rem;
+        }
+
+            .section h2 {
+                font-size: 2rem;
+                color: #333;
+                text-align: center;
+            }
+
+        .bio, .skills, .projects, .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .bio p, .skills ul, .projects .project-list, .contact form {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+
+            .skills ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .skills li {
+                margin: 0.5rem 0;
+            }
+
+            .projects .project-item {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin: 1rem 0;
+                padding: 1rem;
+                transition: transform 0.3s ease-in-out;
+            }
+
+                .projects .project-item:hover {
+                    transform: translateY(-5px);
+                }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+    </style>
+
+    <script language="JavaScript">
+
+        window.onload = function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function (e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+        //edit: removed ";" from last "}" because of javascript error
+    </script>
+
+    <!--<script>
+        $(function () {
+            document.addEventListener('keydown', function (e) {
+                // Disable F12 key
+                if (e.keyCode === 123 || e.key === 'F12') {
+                    e.preventDefault(); // Prevents the default action (opening developer tools)
+                }
+
+                // You can also disable other common developer tool shortcuts like Ctrl+Shift+I (Inspect Element)
+                // Ctrl+Shift+I has keyCode for I as 73
+                if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.key === 'I')) {
+                    e.preventDefault();
+                }
+
+                // Ctrl+U (View Source)
+                // Ctrl+U has keyCode for U as 85
+                if (e.ctrlKey && (e.keyCode === 85 || e.key === 'U')) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>-->
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>PRAVAKAR MONDAL</h1>
+        <nav>
+            <a href="#bio">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Bio Section -->
+    <section id="bio" class="section bio">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Pravakar Mondal, a passionate web developer with a love for creating interactive and dynamic web
+            applications. Carrying over 9+ years of experience in the IT industry using C#, ASP.Net,ASP.NET CORE, MVC, MS SQL Server, Angular, Postgresql, JQuery, JavaScript, Ajax, JSON, Windows Application, Crystal Report, Web API, API INTEGRATION (ONLINE PAYMENT, THIRD PARTY APPLICATION.) etc. Seeking for career growth in Software industry, Development and Web application architecture utilizing knowledge possessed in previous jobs. Having successful track record in working with all levels of technical and non-technical staff in hierarchical organizations.
+            I am always looking for opportunities to learn and grow as a developer.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript & Jquery</li>
+            <li>ASP.Net with C#</li>
+            <li>ASP.Net MVC</li>
+            <li>ASP.Net Core</li>
+            <li>Angular 17</li>
+            <li>Web Service/Web API</li>
+            <li>Dot Net Core Web API</li>
+            <li>API Integration Including Payment Gateway(Billdesk,Razorpay, Paypall etc)</li>
+            <li>Crystal Report</li>
+            <li>Responsive Web Design</li>
+            <li>Desktop application</li>
+            <li>MS SQL Server, Postgresql</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Education</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>2015-16</h3>
+                <h3>GNIIT (SOFTWARE ENGINEERING)</h3>
+                <p>
+                  NIIT (NATIONAL INSTITUTE OF INFORMATION TECHNOLOGY)
+                </p>
+                <!--<a href="https://github.com/yourgithubusername/project1" target="_blank">View on GitHub</a>-->
+            </div>
+            <div class="project-item">
+                <h3>2013</h3>
+                <h3>B.A. IN (ENGLISH, HONS.)</h3>
+                <p>
+                   	CALCUTTA UNIVERSITY   
+                </p>
+                <!--<a href="https://github.com/yourgithubusername/project1" target="_blank">View on GitHub</a>-->
+            </div>
+        </div>
+      </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Forest & Environment Department</h3>
+                    <p>
+                        Description of your project goes here. You can explain what the project is, the technologies you used, and
+                        any challenges you overcame.
+                    </p>
+                    <a href="https://github.com/yourgithubusername/project1" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Transmission Asset Management System</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Online Application & Management</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Certificate Generation With Lenticular Image</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Gofba</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Employee Management</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>School, College & Education System</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Magic Shopping</h3>
+                    <p>Description of your second project goes here. Similar to the first one, explain the purpose and tools used.</p>
+                    <a href="https://github.com/yourgithubusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <!-- Add more project items as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2>Contact</h2>
+            <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                <label for="name">Location:</label><br>
+                <!--<input type="text" id="name" name="name" required>-->
+                <label>Kolkata</label>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <!--<input type="email" id="email" name="email" required>-->
+                <label>pravakarmofficial007@gmail.com</label>
+                <br><br>
+
+                <label for="message">Call/Whatsapp:</label><br>
+                <!--<textarea id="message" name="message" rows="4" required></textarea>-->
+                <label>+91 6295930220</label>
+                <br><br>
+
+                <!--<input type="submit" value="Send Message">-->
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>
+                Created by Pravakar Mondal &copy; 2025 | <a href="https://github.com/yourgithubusername" target="_blank">GitHub</a> |
+                <!--<a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">LinkedIn</a>-->
+            </p>
+        </footer>
+
+</body>
+
+</html>
